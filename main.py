@@ -52,8 +52,8 @@ while True:
     
     elif flag == 2:
         faces = face_detector.detectMultiScale(frame_gray, 1.3)
-        eyes = eye_detector.detectMultiScale(frame_gray, 1.2, minNeighbors= 12)
-        smiles = smile_detector.detectMultiScale(frame_gray, 2, minNeighbors=16)
+        eyes = eye_detector.detectMultiScale(frame_gray, 1.1, minNeighbors= 8)
+        smiles = smile_detector.detectMultiScale(frame_gray, 2.2, minNeighbors=14)
         for eye in eyes:
             x, y, w, h = eye
             new_eye_emoji = cv2.resize(eye_emoji, (w, h))
